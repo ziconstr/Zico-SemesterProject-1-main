@@ -1,0 +1,379 @@
+/* IMPORTS */
+@import url(/css/exhibitions.css);
+@import url(/css/events.css);
+@import url(/css/visit.css);
+@import url(/css/banner.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  flex-flow: column;
+  font-family: "Rubik", system-ui, sans-serif;
+  padding: 0rem 15vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  place-items: center;
+  font-weight: 600;
+  
+}
+
+p {
+  color: rgb(85, 85, 85);
+  font-weight: 400;
+}
+
+.a:hover, a:visited, a:link, a:active {
+  text-decoration:none;
+  color: #eddd04;
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* VARIABLES */
+:root {
+  --color-white: #fff;
+  --color-beige: #f7f7f7;
+  --color-black: #000;
+  --color-blue: #1b455d;
+  --color-yellow: #ebdb00;
+  --color-orange: #ff8c1a;
+  --border-yellow: 2px solid var(--color-yellow);
+}
+
+/* Universal CSS props */
+
+h1,
+h2 {
+  color: var(--color-blue);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.icon {
+  width: 50px;
+}
+
+.social-icon {
+  width: 30px;
+  margin: 20px;
+}
+
+.btn {
+  display: block;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 5px 25px;
+  text-transform: uppercase;
+  font-size: 15px;
+  border-radius: 12px;
+}
+
+
+.btn:hover {
+  color: var(--color-black);
+  background-color: var(--color-orange);
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact {
+  font-weight: 900;
+}
+
+
+
+/* Navigation */
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color: var(--color-white);
+  padding: 12px 20px;
+}
+
+.nav-icon {
+  color: var(--color-blue);
+}
+
+.menu {
+  display: flex;
+  
+}
+
+.menu li {
+  padding-left: 30px;
+}
+
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-blue);
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+  
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-blue);
+  transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+  width: 100%;
+}
+
+.open-menu,
+.close-menu {
+  color: var(--color-black);
+  position: absolute;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+
+#check {
+  display: none;
+}
+
+.active {
+  border-bottom: 2px var(--color-blue) solid;
+}
+
+/* Hero Section */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  
+}
+
+.hero h1 {
+
+  padding-top: 30px;
+  margin: 0 10px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Main Section */
+
+main {
+  margin-top: 100px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 20px auto 60px;
+  border: 2px solid var(--color-black);
+  padding: 20px;
+  border-radius: 8px;
+
+  
+}
+
+.container h2 {
+  margin: 20px 0 10px;
+  font-size: 18px;
+  margin-top: 100px;
+  
+}
+
+.container-img {
+  width: 100%;
+}
+
+.container p {
+  text-align: justify;
+  font-size: 14px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  
+}
+
+/* Get involved */
+
+form{
+  width: 150%;
+}
+
+form label{
+  font-size: 1.2rem;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 0.5em;
+  border: none;
+  font-size: 1.2rem;
+}
+input[type="text"], input[type="email"], textarea {
+  margin: 0 0 1em;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+textarea {
+  height: 6em;
+}
+input[type="submit"], button {
+  background: #4570F3;
+  color: #fff;
+  cursor: pointer;
+}
+input[type="submit"]:hover, button:hover {
+  background: #6E65F4;
+}
+
+
+
+
+/* Footer */
+
+.museum-img {
+  width: 100%;
+}
+
+footer {
+  width: 70%;
+  margin: 30px auto 10px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 12px;
+  text-align: center;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 610px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--color-white);
+    transition: all 0.2s ease-in-out;
+    padding-top: 30px;
+  }
+  .menu li {
+    margin-top: 10px;
+  }
+  .menu li a {
+    padding: 10px;
+  }
+  .open-menu,
+  .close-menu {
+    display: block;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+}
+
+@media (min-width: 620px) {
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .container {
+    width: 45%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .container p {
+    flex: 1 1 auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    height: 250px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .container {
+    width: 30%;
+  }
+
+  .museum-img {
+    width: 100%;
+    height: 500px;
+  }
+
+  footer {
+    width: 100%;
+    margin-top: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    height: 350px;
+  }
+
+  .hero h1 {
+    font-size: 60px;
+  }
+}

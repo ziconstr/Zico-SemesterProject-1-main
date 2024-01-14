@@ -1,0 +1,48 @@
+/* Visit Page */
+.visit-heading {
+  color: var(--color-blue);
+}
+
+.visit-hours {
+  font-family: var(--font-poppins);
+  font-weight: 300;
+  list-style: none;
+  text-align: left;
+}
+
+.location {
+  border: 1px solid var(--color-blue);
+}
+
+.container .no-border {
+  border: none;
+}
+
+.bold {
+  font-weight: 900;
+}
+@media (min-width: 900px) {
+  .visit-hours {
+    margin-bottom: 90px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .banner.location {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .banner.location {
+    width: 500px;
+  }
+
+  .visit-hours {
+    margin-bottom: 110px;
+  }
+
+  .flex-container.visit-container {
+    width: 100%;
+  }
+}
