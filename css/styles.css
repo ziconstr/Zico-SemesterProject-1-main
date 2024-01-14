@@ -14,9 +14,11 @@ body {
   flex-flow: column;
   font-family: "Rubik", system-ui, sans-serif;
   padding: 0rem 15vw;
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  
   max-width: 100%;
   place-items: center;
   font-weight: 600;
@@ -281,15 +283,42 @@ input[type="submit"]:hover, button:hover {
   width: 100%;
 }
 
-footer {
-  width: 70%;
-  margin: 30px auto 10px;
+.footer {
+  position: relative;
+  display: flex;
+  padding: 20px;
+  margin-top: auto;
+
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.footer p {
+  font-size: 12px;
   text-align: center;
+  position:relative;
+}
+
+
+footer {
+  position: relative;
+  display: flex;
+  padding: 20px;
+  margin-top: auto;
+
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
 }
 
 footer p {
   font-size: 12px;
   text-align: center;
+  position:relative;
+
 }
 
 /* MEDIA QUERIES */
